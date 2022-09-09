@@ -6,6 +6,11 @@ Plug 'sheerun/vim-polyglot'
 
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" coc extensions
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier']
+
+" Plug 'pangloss/vim-javascript'
+
 
 " Status bar
 Plug 'maximbaz/lightline-ale'
@@ -46,8 +51,19 @@ Plug 'yggdroot/indentline'
 " To comment lines space c space 
 Plug 'scrooloose/nerdcommenter'
 
+"------------------------ VIM TSX ------------------------
+" by default, if you open tsx file, neovim does not show syntax colors
+" vim-tsx will do all the coloring for jsx in the .tsx file
+Plug 'ianks/vim-tsx'
+"------------------------ VIM TSX ------------------------
+" by default, if you open tsx file, neovim does not show syntax colors
+" typescript-vim will do all the coloring for typescript keywords
+Plug 'leafgarland/typescript-vim'
+
+" Javascript
+
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+" Plug 'mxw/vim-jsx'
 Plug 'othree/yajs.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'othree/html5.vim'
@@ -250,4 +266,15 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
+" == AUTOCMD ================================ 
+" by default .ts file are not identified as typescript and .tsx files are not
+" identified as typescript react file, so add following
+au BufNewFile,BufRead *.ts setlocal filetype=typescript
+au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
 
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+
+
+
+" == AUTOCMD END ================================
