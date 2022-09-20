@@ -275,6 +275,8 @@ au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 
-
+nmap <C-n> :NERDTreeToggle<CR>
+vmap ++ <plug>NERDCommenterToggle
+nmap ++ <plug>NERDCommenterToggle
 
 " == AUTOCMD END ================================
