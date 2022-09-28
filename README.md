@@ -14,3 +14,9 @@ coc-settings.json
   "prettier.eslintIntegration": false,
   "coc.preferences.formateOnSaveFileTypes": ["typescript", "typescriptreact"]
 }
+
+# To install neovim in ubuntu 18 better follow this steps
+
+apt-get install silversearcher-ag
+
+https://medium.com/@leonardormlins/easiest-way-to-update-neovim-on-ubuntu-a283c66d5322
