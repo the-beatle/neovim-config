@@ -19,7 +19,6 @@ Plug 'itchyny/lightline.vim'
 " Nerd tree
 Plug 'scrooloose/nerdtree'
 
-
 " Typing auto pairs parenthesis () {} 
 Plug 'jiangmiao/auto-pairs'
 
@@ -68,6 +67,9 @@ Plug 'othree/yajs.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'othree/html5.vim'
 
+" Github and syntax hightli
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 call plug#end()
 " Themei
@@ -276,5 +278,17 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 
 
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-t> :NERDTree<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+map ++ <plug>NERDCommenterToggle
+nmap ++ <plug>NERDCommenterToggle 
+
+:let g:NERDTreeWinSize=60
+
+
 
 " == AUTOCMD END ================================
+"
